@@ -35,6 +35,15 @@
           "root": "./src/app"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {
+        "root": "./src/app"
+      },
+      "eas": {
+        "projectId": "cab0cd06-0820-42b1-999b-4cd0d10f7c08"
+      }
+    },
+    "owner": "tobsbp"
   }
 }
