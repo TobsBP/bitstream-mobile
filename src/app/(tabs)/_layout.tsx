@@ -1,5 +1,5 @@
+import { MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { Text } from 'react-native';
 
 export default function TabsLayout() {
   return (
@@ -7,39 +7,55 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: '#0F0F0F',
-          borderTopColor: '#2A2A2A',
+          backgroundColor: '#13121C',
+          borderTopColor: '#E0C722',
+          borderTopWidth: 2,
+          height: 80,
         },
-        tabBarActiveTintColor: '#7C3AED',
-        tabBarInactiveTintColor: '#6B7280',
+        tabBarLabelStyle: {
+          fontSize: 10,
+          fontWeight: '700',
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+        },
+        tabBarActiveTintColor: '#FEE341',
+        tabBarInactiveTintColor: 'rgba(255,255,255,0.5)',
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Feed',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🏠</Text>,
+          title: 'FEED',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="grid-view" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
         name="duel"
         options={{
-          title: 'Duelo',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>⚔️</Text>,
+          title: 'DUEL',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="sports-kabaddi" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
         name="discovery"
         options={{
-          title: 'Descobrir',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>🔍</Text>,
+          title: 'EXPLORE',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="search" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Perfil',
-          tabBarIcon: ({ color }) => <Text style={{ color, fontSize: 20 }}>👤</Text>,
+          title: 'LEVEL',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="person" color={color} size={size} />
+          ),
         }}
       />
     </Tabs>
