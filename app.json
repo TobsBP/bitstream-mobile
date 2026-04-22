@@ -37,7 +37,9 @@
         {
           "root": "./src/app"
         }
-      ]
+      ],
+      "expo-secure-store",
+      "@sentry/react-native"
     ],
     "extra": {
       "router": {

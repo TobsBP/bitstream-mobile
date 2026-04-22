@@ -2,6 +2,9 @@ import '../../global.css';
 import { onlineManager, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import * as Network from 'expo-network';
 import { Stack } from 'expo-router';
+import { initSentry } from '@/lib/sentry';
+
+initSentry();
 
 const queryClient = new QueryClient();
 
